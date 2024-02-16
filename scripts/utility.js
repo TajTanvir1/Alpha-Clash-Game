@@ -1,15 +1,28 @@
-// ---------------------------------------Hide element by ID
+// ------------------------------------------------------------Hide element by ID
 function hideElementById(elementId) {
    const element = document.getElementById(elementId)
    element.classList.add('hidden');
 }
 
-// ---------------------------------------Show element by ID
+// ------------------------------------------------------------Show element by ID
 function showElementById(elementId) {
    const element = document.getElementById(elementId)
    element.classList.remove('hidden');
 }
 
+// ------------------------------------------------------------background color by Id
+function setBackgroundColorById(elementId){
+   const element = document.getElementById(elementId);
+   element.classList.add('bg-orange-400');
+}
+
+function removeBackgroundColorById(elementId){
+   const element = document.getElementById(elementId);
+   element.classList.remove('bg-orange-400');
+
+}
+
+// -------------------------------------------------------------get a random number
 function getARandomAlphabet() {
    // abcdefghijklmnopqrstuvwxyz
    const alphabetString = "abcdefghijklmnopqrstuvwxyz";
