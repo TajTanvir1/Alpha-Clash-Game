@@ -19,12 +19,15 @@ function handleKeyboardKeyUpEvent(event){
    const currentAlphabetElement = document.getElementById('current-alphabet');
    const currentAlphabet = currentAlphabetElement.innerText;
    const expectedAlphabet = currentAlphabet.toLowerCase();
-   console.log(playerPressed, expectedAlphabet);
+   // console.log(playerPressed, expectedAlphabet);
 
    // checked matched or not
-   if(playerPressed === expectedAlphabet)(
-      console.log('you got a point')
-   )
+   if(playerPressed === expectedAlphabet){
+      console.log('you got a point');
+      removeBackgroundColorById(expectedAlphabet)
+      continueGame();
+
+}
    else{
       console.log('you pressed wrong key')
    }
