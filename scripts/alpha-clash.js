@@ -25,13 +25,12 @@ function handleKeyboardKeyUpEvent(event) {
    if (playerPressed === expectedAlphabet) {
       // console.log('you got a point');
       
-      /*
       const currentScoreElement = document.getElementById('current-score');
       const currentScoreText = currentScoreElement.innerText;
       const currentScore = parseInt(currentScoreText);
       const newScore = currentScore + 1;
       currentScoreElement.innerText = newScore;
-      */
+      
 
       removeBackgroundColorById(expectedAlphabet);
       continueGame();
