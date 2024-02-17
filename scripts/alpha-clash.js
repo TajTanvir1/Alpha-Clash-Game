@@ -11,7 +11,7 @@ function play(){
 }
 */
 
-function handleKeyboardKeyUpEvent(event){
+function handleKeyboardKeyUpEvent(event) {
    const playerPressed = event.key;
    console.log('Player Pressed', playerPressed);
 
@@ -22,20 +22,34 @@ function handleKeyboardKeyUpEvent(event){
    // console.log(playerPressed, expectedAlphabet);
 
    // checked matched or not
-   if(playerPressed === expectedAlphabet){
-      console.log('you got a point');
-      removeBackgroundColorById(expectedAlphabet)
+   if (playerPressed === expectedAlphabet) {
+      // console.log('you got a point');
+      
+      /*
+      const currentScoreElement = document.getElementById('current-score');
+      const currentScoreText = currentScoreElement.innerText;
+      const currentScore = parseInt(currentScoreText);
+      const newScore = currentScore + 1;
+      currentScoreElement.innerText = newScore;
+      */
+
+      removeBackgroundColorById(expectedAlphabet);
       continueGame();
 
-}
-   else{
+   }
+   else {
       console.log('you pressed wrong key')
+      const currentLifeElement = document.getElementById('current-life');
+      const currentLifeText = currentLifeElement.innerText;
+      const currentLife = parseInt(currentLifeText);
+      const newLife = currentLife - 1;
+      currentLifeElement.innerText = newLife;
    }
 }
 // ---------------------------------------------capture keyboard key press
 document.addEventListener('keyup', handleKeyboardKeyUpEvent)
 
-function continueGame(){
+function continueGame() {
    // 1. generate random alphabet
    const alphabet = getARandomAlphabet();
    // console.log('your random alphabet', alphabet);
@@ -48,7 +62,7 @@ function continueGame(){
    setBackgroundColorById(alphabet)
 }
 
-function play(){
+function play() {
    hideElementById('home-screen');
    showElementById('play-ground');
    continueGame();

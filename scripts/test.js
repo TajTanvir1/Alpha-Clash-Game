@@ -4,3 +4,4 @@ const index = Math.round(randomNumber)
 
 
 console.log(index)
+
